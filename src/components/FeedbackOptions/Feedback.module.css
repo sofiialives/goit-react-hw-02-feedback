@@ -1,0 +1,10 @@
+.statsList{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+.buttonStats{
+    background-color: rgb(246, 246, 233);
+    border: 1px black solid;
+    border-radius: 4px;
+}
