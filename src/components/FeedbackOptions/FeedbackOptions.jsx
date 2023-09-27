@@ -1,19 +1,13 @@
 import css from './Feedback.module.css'
 
-export const FeedbackOptions = ({onLeaveFeedback}) => {
+export const FeedbackOptions = ({onLeaveFeedback, options}) => {
     return(
         <ul className={css.statsList}>
-          <li>
-            <button onClick={() => onLeaveFeedback('good')} className={css.buttonStats}>Good</button>
+          {options.map(option =>(
+            <li key={option}>
+            <button onClick={() => onLeaveFeedback(option)} className={css.buttonStats}>{option}</button>
           </li>
-          <li>
-            <button onClick={() => onLeaveFeedback('neutral')} className={css.buttonStats}>
-              Neutral
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onLeaveFeedback('bad')} className={css.buttonStats}>Bad</button>
-          </li>
+          ))}
         </ul>
     )
 }
